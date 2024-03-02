@@ -1,0 +1,104 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  width: min(95%, 600px);
+  margin: 0 auto;
+  margin-top: 2rem;
+  gap: 5px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  max-height: 80dvh;
+  padding: 3px;
+}
+
+.todos::-webkit-scrollbar {
+  width: 5px;
+  padding: 1rem;
+}
+
+.todos::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.564);
+  border-radius: 5px;
+}
+
+.todos::-webkit-scrollbar-track {
+  background-color: rgba(173, 167, 167, 0.567);
+}
+
+.no-todos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.todo {
+  border: 2px solid black;
+  list-style: none;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all;
+}
+
+.todo-text {
+  cursor: pointer;
+  width: min(75%, 500px);
+}
+
+.todo button {
+  padding: 0.5em;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: rgba(0, 0, 255, 0.689);
+  text-decoration-thickness: 3px;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.3s ease-in;
+}
+
+.slideOutLeft {
+  animation: slideOutLeft 0.3s ease-out;
+}
