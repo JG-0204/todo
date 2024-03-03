@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div>
       <h1 className="app-name">
-        Todo <span className="date">({date})</span>
+        To-do <span className="date">[ {date} ]</span>
       </h1>
       <form onSubmit={handleSubmit} className="todo-form">
         <input

@@ -11,7 +11,7 @@ body {
   min-height: 100dvh;
   width: min(100%, 850px);
   margin: auto;
-  background: url(./assets/bg.png);
+  background: url(./assets/bg.webp);
 }
 
 button {
