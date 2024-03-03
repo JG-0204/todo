@@ -25,13 +25,37 @@
   background-color: rgba(173, 167, 167, 0.567);
 }
 
+.todos-completed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: min(95%, 600px);
+  margin: 0 auto;
+  padding-top: 3rem;
+  height: 70dvh;
+  animation: fadeIn 0.5s ease-in;
+  will-change: animation;
+}
+
+.todos-completed p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  width: min(99%, 550px);
+  text-align: center;
+}
+
 .no-todos {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  margin-top: 3rem;
+  margin: 0 auto;
+  padding-top: 3rem;
   font-weight: 600;
+  text-align: center;
+  width: min(99%, 550px);
 }
 
 .todo {
