@@ -21,7 +21,7 @@ const App = () => {
     event.preventDefault();
     const todoObject = {
       id: Math.floor(Math.random() * 99999),
-      text: todo,
+      text: todo.toLowerCase(),
       completed: false,
     };
     dispatch(addTodo(todoObject));
@@ -37,7 +37,7 @@ const App = () => {
         <label htmlFor="todo-text">To-do: </label>
         <input
           autoCapitalize="false"
-          autoComplete="false"
+          autoComplete="off"
           placeholder="end world hunger 💀"
           type="text"
           id="todo-text"
