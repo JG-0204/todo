@@ -1,13 +1,16 @@
 .todos {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   margin-top: 2rem;
-  gap: 5px;
   scroll-behavior: smooth;
   overflow-y: scroll;
   max-height: 80dvh;
   padding: 3px;
+}
+
+.todos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .todos::-webkit-scrollbar {
