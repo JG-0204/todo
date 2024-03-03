@@ -2,18 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const selectTodos = (state) => state.todos;
 
-const initialState = [
-  {
-    id: 1,
-    text: 'do something cool',
-    completed: true,
-  },
-  {
-    id: 2,
-    text: 'do something cooler',
-    completed: false,
-  },
-];
+const initialState = JSON.parse(localStorage.getItem('todos')) ?? [];
+
 const todosSlice = createSlice({
   name: 'todos',
   initialState,

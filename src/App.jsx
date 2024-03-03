@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { selectTodos, addTodo } from './components/todosSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { date } from './utils/getDate';
@@ -10,6 +10,10 @@ import './App.css';
 const App = () => {
   const dispatch = useDispatch();
   const todos = useSelector(selectTodos);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const [todo, setTodo] = useState('');
 
