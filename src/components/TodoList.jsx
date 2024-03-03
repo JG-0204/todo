@@ -31,7 +31,7 @@ const Todo = ({ todo }) => {
 
 const TodoList = ({ todos }) => {
   const noTodosText =
-    "No to-dos in sight! 🎉 Chill out and enjoy the moment – you've got nothing on your plate right now! Unless you want to add new one.";
+    "No to-dos in sight! 🎉 Chill out and enjoy the moment – you've got nothing on your plate right now! Unless you want to add one.";
 
   const todosCompletedText =
     "おめでとう (Congratulations)! 🎉 You rocked your to-do list today! Give yourself a pat on the back and go do something fun – you've totally earned it! 🚀";
@@ -44,11 +44,11 @@ const TodoList = ({ todos }) => {
 
   if (isTodosCompleted) {
     return (
-      <div className="todos-completed">
+      <div className="todos-completed container-600">
         <svg
           fill="rgba(0, 0, 255, 0.689)"
-          width="500px"
-          height="45%"
+          width="300px"
+          height="250px"
           viewBox="0 0 40 47"
         >
           <g>
@@ -69,10 +69,12 @@ const TodoList = ({ todos }) => {
   }
 
   return (
-    <div className="todos">
-      {todos?.map((todo) => (
-        <Todo key={todo.id} todo={todo} />
-      ))}
+    <div className="todos container-600">
+      <ul>
+        {todos?.map((todo) => (
+          <Todo key={todo.id} todo={todo} />
+        ))}
+      </ul>
     </div>
   );
 };

@@ -29,13 +29,18 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1 className="app-name">
+    <div className="container-800">
+      <h1 className="app-name container-800">
         To-do <span className="date">[ {date} ]</span>
       </h1>
-      <form onSubmit={handleSubmit} className="todo-form">
+      <form onSubmit={handleSubmit} className="todo-form container-600">
+        <label htmlFor="todo-text">To-do: </label>
         <input
+          autoCapitalize="false"
+          autoComplete="false"
+          placeholder="end world hunger 💀"
           type="text"
+          id="todo-text"
           value={todo}
           onChange={({ target }) => setTodo(target.value)}
         />
